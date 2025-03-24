@@ -54,7 +54,7 @@ export default function ContactPage() {
               Get In Touch
             </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We're here to help! Contact us with any questions or visit our store in Dungla.
+              We&apos;re here to help! Contact us with any questions or visit our store in Dungla.
             </p>
           </motion.div>
           
@@ -179,7 +179,7 @@ export default function ContactPage() {
                     </svg>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Message Sent!</h3>
                     <p className="text-gray-600 mb-4">
-                      Thank you for contacting us. We'll get back to you as soon as possible.
+                      Thank you for contacting us. We&apos;ll get back to you as soon as possible.
                     </p>
                     <button
                       onClick={() => setFormStatus('idle')}
@@ -251,7 +251,7 @@ export default function ContactPage() {
                         required
                         rows={5}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors duration-300 resize-none"
-                        placeholder="How can we help you?"
+                        placeholder="I&apos;m interested in your products and would like more information."
                       ></textarea>
                     </div>
                     
@@ -317,7 +317,7 @@ export default function ContactPage() {
             
             <div className="mt-8 text-center">
               <p className="text-gray-600">
-                Need assistance outside business hours? Contact us through WhatsApp or email, and we'll get back to you as soon as possible.
+                Need assistance outside business hours? Contact us through WhatsApp or email, and we&apos;ll get back to you as soon as possible.
               </p>
             </div>
           </motion.div>
