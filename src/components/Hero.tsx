@@ -22,7 +22,7 @@ const Hero = () => {
     }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [shopImages.length]);
 
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white py-16 md:py-24">

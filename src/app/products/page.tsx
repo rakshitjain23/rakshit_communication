@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { FaSearch, FaFilter, FaWhatsapp, FaStar } from 'react-icons/fa';
+import { FaSearch, FaFilter, FaWhatsapp } from 'react-icons/fa';
 
 // Sample product data
 const productCategories = [
@@ -334,7 +334,7 @@ export default function ProductsPage() {
       );
     }
     
-    setVisibleProducts(filtered);
+    return filtered;
   };
   
   // Handle category change
@@ -350,13 +350,15 @@ export default function ProductsPage() {
   // Search form submit
   const handleSearchSubmit = (e: FormEvent) => {
     e.preventDefault();
-    filterProducts();
+    const filtered = filterProducts();
+    setVisibleProducts(filtered);
   };
   
-  // Filter when category or search changes
+  // Apply filtering when category or searchQuery changes
   useEffect(() => {
-    filterProducts();
-  }, [selectedCategory]); // Only auto-filter on category change, search requires submit
+    const filtered = filterProducts();
+    setVisibleProducts(filtered);
+  }, [selectedCategory, searchQuery, filterProducts]);
   
   return (
     <main>
@@ -439,13 +441,14 @@ export default function ProductsPage() {
                 <div className="bg-gray-50 rounded-xl p-10 text-center">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">No products found</h3>
                   <p className="text-gray-600 mb-4">
-                    We couldn't find any products matching your criteria.
+                    We couldn&apos;t find any products matching your criteria.
                   </p>
                   <button
                     onClick={() => {
                       setSelectedCategory('all');
                       setSearchQuery('');
-                      filterProducts();
+                      const filtered = filterProducts();
+                      setVisibleProducts(filtered);
                     }}
                     className="text-blue-600 font-medium hover:underline"
                   >
