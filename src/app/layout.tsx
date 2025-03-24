@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rakshit Communication - Electronics Shop in Jaipur",
-  description: "Your trusted electronics shop in Jaipur offering a wide range of electronics products with expert service and support.",
-  keywords: ["electronics shop", "Jaipur", "mobile phones", "accessories", "laptops", "Rakshit Communication"],
+  title: "Rakshit Communication - Electronics Shop in Dungla",
+  description: "Your trusted electronics shop in Dungla offering a wide range of electronics products with expert service and support.",
+  keywords: ["electronics shop", "Dungla", "mobile phones", "coolers", "laptops", "Rakshit Communication"],
 };
 
 export default function RootLayout({
