@@ -502,7 +502,7 @@ export default function ProductsPage() {
                             )}
                           </div>
                           <Link
-                            href={`https://wa.me/919828044966?text=I'm interested in ${product.name}`}
+                            href={`https://wa.me/919828044966?text=I&apos;m interested in ${product.name}`}
                             className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors duration-300"
                             target="_blank"
                             rel="noopener noreferrer"
